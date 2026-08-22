@@ -32,7 +32,11 @@ h1 b{color:#c6ff3d}
 </style></head><body><div class="wrap">
 
 <h1>RISK<b>IT</b>. &mdash; Landing Page Previews</h1>
-<p class="sub">One page, ten designs. Tap any card to open the full landing page &mdash; works on phone and laptop.</p>
+<p class="sub">Tap any card to open the full landing page &mdash; works on phone and laptop.</p>
+
+<div class="edhead"><h2>10 Design Themes</h2><span class="tagpill rec">NEW</span><span style="color:#8a8a9c;font-size:13px">all-new fonts &amp; layouts</span></div>
+<p class="eddesc">Ten completely different design directions for the classic offer &mdash; each with its own fonts, layout and design language (Brutalist, Editorial, Synthwave, Luxury, Swiss, Y2K, Athletic, Wellness, Terminal, Riso Poster).</p>
+<div class="grid" id="themes"></div>
 
 <div class="edhead"><h2>Extreme edition</h2><span class="tagpill rec">RECOMMENDED</span><span style="color:#8a8a9c;font-size:13px">5 palettes</span></div>
 <p class="eddesc">Free-transformation messaging, Tamil-Nadu-safe wording, and animations that run on mobile too. Use this set for anything public-facing.</p>
@@ -87,6 +91,25 @@ function card(vn,name,bg,ac,li,href,headline,cta,psy){
   <div class="hex">${bg} &nbsp; ${ac} &nbsp; ${li}</div>
   ${psy?`<div class="psy">${psy}</div>`:''}</div></a>`;
 }
+// 10 design themes
+const TH=[
+ ["01","Brutalist","01-brutalist.html","Archivo Black · thick borders, acid yellow"],
+ ["02","Editorial","02-editorial.html","Fraunces serif · magazine, cream & rust"],
+ ["03","Synthwave","03-synthwave.html","Orbitron · neon grid, retro-80s"],
+ ["04","Luxury","04-luxury.html","Cormorant · black & gold, refined"],
+ ["05","Swiss","05-swiss.html","Archivo · grid, red accent, precise"],
+ ["06","Y2K Bubble","06-y2k.html","Baloo 2 · glossy, playful pastels"],
+ ["07","Athletic","07-athletic.html","Anton · italic, diagonal, red/black"],
+ ["08","Wellness","08-wellness.html","Fraunces · calm sage, organic"],
+ ["09","Terminal","09-terminal.html","JetBrains Mono · green-on-black code"],
+ ["10","Riso Poster","10-riso.html","Bebas Neue · halftone, blue & red"]
+];
+document.getElementById('themes').innerHTML=TH.map(t=>`
+ <a class="card" href="themes/${t[2]}"><div class="prev" style="background:#0e0e18;justify-content:flex-end">
+  <div style="font-family:'Unbounded';font-weight:900;font-size:12px;color:#c6ff3d">THEME ${t[0]}</div>
+  <div style="font-family:'Unbounded';font-weight:900;font-size:26px;line-height:1.05">${t[1]}</div>
+  <div class="chip" style="background:#c6ff3d;color:#08110a">Open theme &rarr;</div></div>
+  <div class="meta"><div class="nm">${t[1]}</div><div class="psy">${t[3]}</div></div></a>`).join('');
 document.getElementById('extreme').innerHTML=EX.map(p=>card(p[0],p[1],p[2],p[3],p[4],`riskit_v${p[0]}.html`,"FREE<br>transformation.","Start free","")).join('');
 document.getElementById('classic').innerHTML=CL.map(p=>card(p[0],p[1],p[2],p[3],p[4],`classic/riskit_v${p[0]}.html`,"Lose 10kg.<br>Get it back.","Risk it now",p[5])).join('');
 </script>

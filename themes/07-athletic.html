@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RISKIT — Athletic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0A0A;--red:#E10600;--paper:#F2F2F2}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Oswald',sans-serif;background:var(--bg);color:var(--paper);line-height:1.4;overflow-x:hidden}
+h1,h2,h3,.d{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.92}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.slash{background:var(--red);overflow:hidden;white-space:nowrap}
+.slash div{display:inline-block;animation:s 14s linear infinite;font-family:'Anton';font-size:15px;padding:8px 0;text-transform:uppercase;letter-spacing:.06em}
+.slash span{margin:0 20px}@keyframes s{to{transform:translateX(-50%)}}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-bottom:2px solid #ffffff1a;position:sticky;top:0;background:#0A0A0Aee;z-index:20}
+.logo{font-family:'Anton';font-size:26px;font-style:italic}
+.logo b{color:var(--red)}
+.btn{font-family:'Anton';font-size:15px;text-transform:uppercase;background:var(--red);color:#fff;padding:14px 26px;text-decoration:none;display:inline-block;transform:skewX(-8deg);transition:.15s}
+.btn span{display:inline-block;transform:skewX(8deg)}
+.btn:hover{background:#fff;color:var(--red)}
+.btn.ol{background:transparent;box-shadow:inset 0 0 0 2px #fff}
+.hero{padding:64px 0 50px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;top:0;right:-10%;width:60%;height:100%;background:repeating-linear-gradient(115deg,#E1060022 0 14px,transparent 14px 40px);z-index:0}
+.hero h1{font-size:clamp(50px,12vw,150px);font-style:italic;position:relative;z-index:1}
+.hero h1 span{color:var(--red);-webkit-text-stroke:0}
+.hero h1 .o{-webkit-text-stroke:2px var(--paper);color:transparent}
+.hero p{font-family:'Oswald';font-weight:500;font-size:20px;max-width:560px;margin:24px 0;position:relative;z-index:1}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;position:relative;z-index:1}
+.sec{padding:60px 0;border-top:2px solid #ffffff1a;position:relative}
+.k{font-family:'Anton';color:var(--red);font-size:16px;letter-spacing:.14em;margin-bottom:12px}
+.h2{font-size:clamp(34px,7vw,72px);font-style:italic;margin-bottom:16px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+@media(max-width:760px){.g3{grid-template-columns:1fr}}
+.card{background:#141414;border-left:5px solid var(--red);padding:26px;transform:skewX(-3deg)}
+.card>*{transform:skewX(3deg)}
+.card .no{font-family:'Anton';font-size:52px;color:var(--red);font-style:italic}
+.card h3{font-family:'Anton';font-size:24px;margin:2px 0 8px}
+.card p{font-family:'Oswald';color:#bbb}
+.tier{background:#141414;padding:28px;border-top:5px solid var(--red)}
+.tier.best{background:var(--red)}
+.tier .big{font-family:'Anton';font-size:70px;font-style:italic;line-height:1}
+.tier .lab{font-family:'Anton';font-size:14px;letter-spacing:.08em;color:var(--red)}
+.tier.best .lab{color:#fff}
+.tier ul{font-family:'Oswald';margin:14px 0 0 18px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;max-width:640px}
+input{background:#141414;border:2px solid #ffffff22;padding:14px;color:#fff;font-family:'Oswald';font-size:16px}
+input:focus{outline:0;border-color:var(--red)}
+.full{grid-column:1/-1}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+footer{padding:40px 22px;border-top:2px solid #ffffff1a}
+.disc{font-family:'Oswald';font-size:12px;color:#888;margin-top:10px;max-width:640px}
+.reveal{opacity:0;transform:translateY(20px) skewX(-3deg);transition:.5s}.reveal.in{opacity:1;transform:skewX(-3deg)}
+</style></head><body>
+<div class="slash"><div><span>/// GET YOUR SALARY BACK</span><span>/// LOSE 10KG</span><span>/// NO EXCUSES</span><span>/// TRAIN HARD</span><span>/// GET YOUR SALARY BACK</span><span>/// LOSE 10KG</span><span>/// NO EXCUSES</span><span>/// TRAIN HARD</span></div></div>
+<nav><div class="logo">RISK<b>IT</b></div><a href="#apply" class="btn"><span>Take the challenge</span></a></nav>
+<header class="hero wrap">
+  <h1>Salary on<br>the line.<br><span>Lose 10kg.</span></h1>
+  <p>Your money is the coach that never lets you skip. Follow the blueprint, hit the target, take it all back.</p>
+  <div class="cta"><a href="#apply" class="btn"><span>Risk it now</span></a><a href="#how" class="btn ol"><span>How it works</span></a></div>
+</header>
+<section class="sec wrap" id="how"><div class="k">HOW IT WORKS</div><h2 class="h2">Dead simple.</h2>
+  <div class="g3">
+    <div class="card reveal"><div class="no">01</div><h3>Stake your salary</h3><p>One month upfront. Commitment locked in.</p></div>
+    <div class="card reveal"><div class="no">02</div><h3>Follow the blueprint</h3><p>Exact 3-month plan + daily WhatsApp.</p></div>
+    <div class="card reveal"><div class="no">03</div><h3>Take it back</h3><p>Hit 10kg, verify, salary returns.</p></div>
+  </div>
+</section>
+<section class="sec wrap"><div class="k">THE STAKES</div><h2 class="h2">Your money. Your call.</h2>
+  <div class="g3">
+    <div class="tier best reveal"><div class="lab">10KG / 3 MONTHS</div><div class="big">90%</div><div class="lab">SALARY BACK</div><ul><li>We keep 10%</li><li>Max payout</li></ul></div>
+    <div class="tier reveal"><div class="lab">10KG / 4 MONTHS</div><div class="big">80%</div><div class="lab">SALARY BACK</div><ul><li>We keep 20%</li><li>Grace month</li></ul></div>
+    <div class="tier reveal"><div class="lab">MISSED</div><div class="big">50%</div><div class="lab">SALARY BACK</div><ul><li>Half returned</li><li>Keep blueprint</li></ul></div>
+  </div>
+</section>
+<section class="sec wrap" id="apply"><div class="k">ENROL</div><h2 class="h2">Bet on yourself.</h2>
+  <form onsubmit="this.style.display='none';document.getElementById('ok').style.display='block';return false">
+    <input required placeholder="FULL NAME"><input required placeholder="PHONE (WHATSAPP)">
+    <input required placeholder="EMAIL" class="full">
+    <input required placeholder="CITY"><input required placeholder="CURRENT WEIGHT (KG)" type="number">
+    <button class="btn full" style="border:0;cursor:pointer;transform:none"><span style="transform:none">CLAIM MY SPOT</span></button>
+  </form>
+  <div id="ok" style="display:none;font-family:'Anton';font-style:italic;font-size:24px;color:var(--red);margin-top:16px">YOU'RE IN — WE'LL WHATSAPP YOU IN 24H.</div>
+</section>
+<footer class="wrap"><div class="logo">RISK<b>IT</b></div><p style="font-family:'Oswald';margin-top:6px">Risk it. Shred it. Get it back.</p>
+<p class="disc">Self-directed fitness accountability program, not medical advice. Consult a physician first. Terms in the participant agreement. Theme 07 · Athletic.</p></footer>
+<script>const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.15});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body></html>

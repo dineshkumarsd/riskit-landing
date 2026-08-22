@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RISKIT — Wellness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF2E4;--green:#2F5D3A;--terra:#D98E4A;--card:#FBFCF7}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--green);line-height:1.7;font-weight:400}
+h1,h2,h3,.d{font-family:'Fraunces',serif;font-weight:500;line-height:1.1}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 26px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 26px}
+.logo{font-family:'Fraunces';font-size:25px;font-weight:600}
+.logo b{color:var(--terra)}
+.btn{font-family:'Nunito Sans';font-weight:700;font-size:14px;background:var(--green);color:var(--bg);padding:13px 26px;border-radius:100px;text-decoration:none;display:inline-block;transition:.2s}
+.btn:hover{background:var(--terra)}
+.btn.ol{background:transparent;color:var(--green);border:1.5px solid var(--green)}
+.hero{padding:70px 0 50px;text-align:center}
+.leaf{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:22px}
+.hero h1{font-size:clamp(40px,7.5vw,86px);font-weight:400}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero p{max-width:560px;margin:24px auto 0;font-size:18px;color:#4a6b52}
+.hero .cta{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.wave{display:block;width:100%;height:60px}
+.sec{padding:70px 0}
+.sec.alt{background:var(--card);border-radius:40px;margin:0 14px}
+.k{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:12px;text-align:center}
+.h2{font-size:clamp(30px,5vw,52px);font-weight:400;text-align:center;margin-bottom:10px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+@media(max-width:760px){.g3{grid-template-columns:1fr}}
+.card{background:var(--card);border-radius:26px;padding:32px;text-align:center}
+.sec.alt .card{background:var(--bg)}
+.card .ic{width:56px;height:56px;border-radius:50%;background:var(--bg);display:grid;place-items:center;margin:0 auto 14px;font-family:'Fraunces';font-size:24px;color:var(--terra)}
+.sec.alt .card .ic{background:var(--card)}
+.card h3{font-size:23px;margin-bottom:6px}
+.card p{color:#4a6b52;font-size:15px}
+.tier{background:var(--card);border-radius:26px;padding:34px;text-align:center}
+.tier.best{background:var(--green);color:var(--bg)}
+.tier .big{font-family:'Fraunces';font-size:62px;line-height:1}
+.tier.best .big{color:var(--bg)}.tier .big{color:var(--terra)}
+.tier.best .big{color:#F0C89A}
+.tier .lab{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.tier.best .lab{color:#F0C89A}
+.tier ul{list-style:none;margin-top:16px;font-size:15px;color:#4a6b52}
+.tier.best ul{color:#d7e4d0}
+.tier li{padding:4px 0}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px auto 0;max-width:600px}
+input{background:var(--card);border:1.5px solid #2F5D3A22;border-radius:16px;padding:14px;font-family:'Nunito Sans';font-size:16px;color:var(--green)}
+input:focus{outline:0;border-color:var(--terra)}
+.full{grid-column:1/-1}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+footer{padding:44px 26px;text-align:center}
+.disc{font-size:12px;color:#7d9584;margin-top:10px;max-width:600px;margin-left:auto;margin-right:auto}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s}.reveal.in{opacity:1;transform:none}
+</style></head><body>
+<nav><div class="logo">Risk<b>it</b>.</div><a href="#apply" class="btn">Take the challenge</a></nav>
+<header class="hero wrap">
+  <div class="leaf">Mindful · Sustainable · Tamil Nadu</div>
+  <h1>Put your salary on the line.<br><em>Lose 10kg</em>, naturally.</h1>
+  <p>A calm, structured 3-month reset — with your own money as the gentle nudge that keeps you consistent. Reach your goal and it all comes back.</p>
+  <div class="cta"><a href="#apply" class="btn">Begin your reset</a><a href="#how" class="btn ol">How it works</a></div>
+</header>
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#FBFCF7"/></svg>
+<section class="sec alt" id="how"><div class="wrap"><div class="k">The Method</div><h2 class="h2">Gentle. Structured. Effective.</h2>
+  <div class="g3">
+    <div class="card reveal"><div class="ic">01</div><h3>Commit with intent</h3><p>Place one month's salary as your commitment — the quiet accountability that keeps you going.</p></div>
+    <div class="card reveal"><div class="ic">02</div><h3>Follow the blueprint</h3><p>A balanced 3-month plan with daily guidance to your WhatsApp.</p></div>
+    <div class="card reveal"><div class="ic">03</div><h3>Receive it back</h3><p>Reach your goal, verify simply, and your commitment returns to you.</p></div>
+  </div></div>
+</section>
+<section class="sec"><div class="wrap"><div class="k">The Terms</div><h2 class="h2">Your money, returned.</h2>
+  <div class="g3">
+    <div class="tier best reveal"><div class="lab">10kg · 3 months</div><div class="big">90%</div><div class="lab">returned</div><ul><li>We retain 10%</li><li>Fullest result</li><li>Largest refund</li></ul></div>
+    <div class="tier reveal"><div class="lab">10kg · 4 months</div><div class="big">80%</div><div class="lab">returned</div><ul><li>We retain 20%</li><li>A month of grace</li><li>Still a win</li></ul></div>
+    <div class="tier reveal"><div class="lab">Not this round</div><div class="big">50%</div><div class="lab">returned</div><ul><li>Half returned</li><li>Blueprint kept</li><li>Re-entry offered</li></ul></div>
+  </div></div>
+</section>
+<section class="sec alt" id="apply"><div class="wrap"><div class="k">Enrol</div><h2 class="h2">Bet on yourself.</h2>
+  <form onsubmit="this.style.display='none';document.getElementById('ok').style.display='block';return false">
+    <input required placeholder="Full name"><input required placeholder="Phone (WhatsApp)">
+    <input required placeholder="Email" class="full">
+    <input required placeholder="City"><input required placeholder="Current weight (kg)" type="number">
+    <button class="btn full" style="border:0;cursor:pointer">Reserve my place</button>
+  </form>
+  <div id="ok" style="display:none;font-family:'Fraunces';font-style:italic;font-size:24px;color:var(--terra);margin-top:18px;text-align:center">You're in — we'll reach out within 24 hours 🌿</div>
+</div></section>
+<footer><div class="logo">Risk<b>it</b>.</div><p style="margin-top:6px;color:#4a6b52">Risk it. Shred it. Get it back.</p>
+<p class="disc">Self-directed fitness accountability program, not medical advice. Consult a physician first. Terms in the participant agreement. Theme 08 · Wellness.</p></footer>
+<script>const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.15});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body></html>

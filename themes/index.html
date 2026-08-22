@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RISKIT — 10 Design Themes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800;900&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Space Grotesk',sans-serif;background:#08080d;color:#f4f4fb;padding:48px 22px 90px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-family:'Unbounded';font-weight:900;font-size:clamp(30px,6vw,56px)}h1 b{color:#c6ff3d}
+.sub{color:#a2a2b8;margin:12px 0 8px;font-size:18px;max-width:720px}
+.back{color:#c6ff3d;text-decoration:none;font-size:14px;display:inline-block;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px;margin-top:26px}
+.card{border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;background:#0e0e18;transition:transform .18s,border-color .18s;display:block;text-decoration:none;color:inherit}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.4)}
+.thumb{height:220px;border-bottom:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}
+.thumb iframe{width:1180px;height:1600px;border:0;transform:scale(.271);transform-origin:top left;pointer-events:none}
+.meta{padding:16px 18px}
+.meta .nm{font-family:'Unbounded';font-weight:700;font-size:15px}
+.meta .ds{color:#8a8a9c;font-size:13px;margin-top:6px}
+.no{font-family:'Unbounded';color:#c6ff3d;font-size:12px}
+</style></head><body><div class="wrap">
+<a class="back" href="../">&larr; Back to all previews</a>
+<h1>RISK<b>IT</b>. &mdash; 10 Design Themes</h1>
+<p class="sub">Ten completely different design directions for the same classic offer &mdash; each with its own fonts, layout and design language. Tap any to open the full page.</p>
+<div class="grid" id="g"></div>
+</div>
+<script>
+const T=[
+ ["01","Brutalist","Archivo Black · thick borders, hard shadows, acid yellow","01-brutalist.html"],
+ ["02","Editorial","Fraunces serif · magazine columns, cream & rust","02-editorial.html"],
+ ["03","Synthwave","Orbitron · neon grid, retro-80s sunset","03-synthwave.html"],
+ ["04","Luxury","Cormorant Garamond · black & gold, refined minimal","04-luxury.html"],
+ ["05","Swiss","Archivo · 12-col grid, red accent, precise","05-swiss.html"],
+ ["06","Y2K Bubble","Baloo 2 · glossy, rounded, playful pastels","06-y2k.html"],
+ ["07","Athletic","Anton · italic condensed, diagonal energy, red/black","07-athletic.html"],
+ ["08","Wellness","Fraunces + Nunito · calm sage, organic curves","08-wellness.html"],
+ ["09","Terminal","JetBrains Mono · green-on-black code aesthetic","09-terminal.html"],
+ ["10","Riso Poster","Bebas Neue · halftone print, blue & red-orange","10-riso.html"]
+];
+document.getElementById('g').innerHTML=T.map(t=>`
+ <a class="card" href="${t[3]}">
+  <div class="thumb"><iframe src="${t[3]}" loading="lazy" title="${t[1]}"></iframe></div>
+  <div class="meta"><div class="no">THEME ${t[0]}</div><div class="nm">${t[1]}</div><div class="ds">${t[2]}</div></div>
+ </a>`).join('');
+</script>
+</body></html>

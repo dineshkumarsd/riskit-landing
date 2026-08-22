@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RISKIT — Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F6F1E7;--ink:#171310;--rust:#B0451A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+h1,h2,h3,.d{font-family:'Fraunces',serif}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 26px;border-bottom:1px solid var(--ink)}
+.logo{font-family:'Fraunces';font-weight:900;font-size:24px;letter-spacing:-.02em}
+.logo em{color:var(--rust);font-style:italic}
+.btn{font-family:'Inter';font-weight:600;font-size:14px;background:var(--ink);color:var(--paper);padding:12px 22px;border-radius:2px;text-decoration:none;display:inline-block;transition:.2s}
+.btn:hover{background:var(--rust)}
+.btn.ol{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.top{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:10px 26px;border-bottom:1px solid var(--ink);color:var(--rust)}
+.hero{padding:70px 0 40px;text-align:center;border-bottom:1px solid var(--ink)}
+.hero .lead{font-family:'Fraunces';font-style:italic;font-size:19px;color:var(--rust);margin-bottom:20px}
+.hero h1{font-size:clamp(44px,8.5vw,96px);font-weight:900;line-height:1;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--rust)}
+.hero p{max-width:620px;margin:26px auto 0;font-size:18px;column-count:1}
+.hero .cta{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.rule{height:1px;background:var(--ink);margin:0}
+.sec{padding:64px 0;border-bottom:1px solid var(--ink)}
+.k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:14px}
+.h2{font-size:clamp(30px,5vw,52px);font-weight:900;letter-spacing:-.02em;margin-bottom:10px}
+.cols{column-count:3;column-gap:34px;margin-top:30px}
+.cols p{break-inside:avoid;margin-bottom:18px}
+.cols h3{font-family:'Fraunces';font-size:22px;margin-bottom:6px}
+.cols .n{font-family:'Fraunces';font-style:italic;color:var(--rust);font-size:15px}
+@media(max-width:760px){.cols{column-count:1}}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:30px;border:1px solid var(--ink)}
+.tier{padding:30px;border-right:1px solid var(--ink)}
+.tier:last-child{border-right:0}
+.tier.best{background:var(--ink);color:var(--paper)}
+.tier .big{font-family:'Fraunces';font-weight:900;font-size:60px;line-height:1}
+.tier .lab{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust)}
+.tier.best .lab{color:#E8A87C}
+.tier ul{margin:16px 0 0 18px;font-size:15px}
+@media(max-width:760px){.tiers{grid-template-columns:1fr}.tier{border-right:0;border-bottom:1px solid var(--ink)}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px;max-width:640px}
+input{border:0;border-bottom:1px solid var(--ink);background:transparent;padding:12px 2px;font-family:'Inter';font-size:16px;color:var(--ink)}
+input:focus{outline:0;border-color:var(--rust)}
+.full{grid-column:1/-1}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+footer{padding:40px 26px;font-size:14px}
+.disc{font-size:12px;color:#6b5f52;margin-top:10px;max-width:640px}
+.reveal{opacity:0;transform:translateY(18px);transition:.6s}.reveal.in{opacity:1;transform:none}
+</style></head><body>
+<div class="top"><span>The Transformation Quarterly</span><span>No. 01 — Tamil Nadu Edition</span></div>
+<nav><div class="logo">Risk<em>It</em>.</div><a href="#apply" class="btn">Take the challenge</a></nav>
+<header class="hero wrap">
+  <div class="lead">A results-first fitness challenge</div>
+  <h1>Put your salary on the line.<br><em>Lose ten kilos.</em> Get it back.</h1>
+  <p>The accountability challenge that actually works — because your own money is at stake. Follow the exact three-month blueprint, hit your target, and walk away with your cash and your new body.</p>
+  <div class="cta"><a href="#apply" class="btn">Risk it now</a><a href="#how" class="btn ol">Read how it works</a></div>
+</header>
+<section class="sec" id="how"><div class="wrap"><div class="k">The Method</div><h2 class="h2">Dead simple. Brutally effective.</h2>
+  <div class="cols">
+    <div class="reveal"><div class="n">Chapter I</div><h3>Stake your salary</h3><p>Pay one month's salary upfront. That single act of commitment is where every excuse quietly dies.</p></div>
+    <div class="reveal"><div class="n">Chapter II</div><h3>Follow the blueprint</h3><p>A precise three-month nutrition and training plan, with daily guidance delivered to your WhatsApp.</p></div>
+    <div class="reveal"><div class="n">Chapter III</div><h3>Reclaim it</h3><p>Verify your result with photographs and a weigh-in. Hit the target and your money returns to you.</p></div>
+  </div></div>
+</section>
+<section class="sec"><div class="wrap"><div class="k">The Stakes</div><h2 class="h2">Your money, your pace.</h2>
+  <div class="tiers">
+    <div class="tier best reveal"><div class="lab">Ten kilos · three months</div><div class="big">90%</div><div class="lab">returned</div><ul><li>We retain just 10%</li><li>Fastest, largest refund</li></ul></div>
+    <div class="tier reveal"><div class="lab">Ten kilos · four months</div><div class="big">80%</div><div class="lab">returned</div><ul><li>We retain 20%</li><li>A month of grace</li></ul></div>
+    <div class="tier reveal"><div class="lab">Not this round</div><div class="big">50%</div><div class="lab">returned</div><ul><li>Half refunded</li><li>Blueprint is yours to keep</li></ul></div>
+  </div></div>
+</section>
+<section class="sec" id="apply"><div class="wrap"><div class="k">Enrolment</div><h2 class="h2">Bet on yourself.</h2>
+  <p style="margin-top:8px;max-width:560px">Apply below and we'll telephone you to confirm your place. Limited to a small cohort each month.</p>
+  <form onsubmit="this.style.display='none';document.getElementById('ok').style.display='block';return false">
+    <input required placeholder="Full name"><input required placeholder="Phone (WhatsApp)">
+    <input required placeholder="Email" class="full">
+    <input required placeholder="City"><input required placeholder="Current weight (kg)" type="number">
+    <button class="btn full">Claim my place</button>
+  </form>
+  <div id="ok" style="display:none;font-family:'Fraunces';font-style:italic;font-size:22px;color:var(--rust);margin-top:20px">You're in the queue — we'll be in touch within 24 hours.</div>
+</div></section>
+<footer><div class="wrap"><div class="logo">Risk<em>It</em>.</div><p style="margin-top:6px">Risk it. Shred it. Get it back.</p>
+<p class="disc">A self-directed fitness accountability program, not medical advice. Consult a physician before beginning. Refund terms governed by the participant agreement. Theme 02 · Editorial.</p></div></footer>
+<script>const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.15});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body></html>

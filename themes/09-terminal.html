@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RISKIT — Terminal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080D08;--green:#00FF66;--dim:#0b3b1f;--paper:#C7FFD8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'JetBrains Mono',monospace;background:var(--bg);color:var(--paper);line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:repeating-linear-gradient(0deg,#00ff6608 0 1px,transparent 1px 3px)}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-bottom:1px solid var(--dim);position:sticky;top:0;background:#080D08ee;z-index:20}
+.logo{font-weight:800;font-size:20px;color:var(--green)}
+.logo:before{content:"> "}
+.btn{font-family:'JetBrains Mono';font-weight:700;font-size:13px;background:var(--green);color:#001a08;padding:11px 18px;text-decoration:none;display:inline-block;transition:.12s}
+.btn:hover{box-shadow:0 0 18px var(--green)}
+.btn.ol{background:transparent;color:var(--green);border:1px solid var(--green)}
+.hero{padding:60px 0 40px}
+.term{border:1px solid var(--dim);border-radius:8px;overflow:hidden;background:#050a05}
+.term .bar{background:#0c160c;padding:10px 14px;border-bottom:1px solid var(--dim);font-size:12px;color:#5f9f76}
+.term .bar b{color:#ff5f56}.term .bar i{color:#ffbd2e;font-style:normal}.term .bar u{color:#27c93f;text-decoration:none}
+.term .body{padding:26px}
+.cmt{color:#5f9f76}
+.hero h1{font-size:clamp(30px,6.5vw,66px);font-weight:800;color:var(--green);margin:8px 0;line-height:1.05}
+.hero h1 .c{color:var(--paper)}
+.cursor{display:inline-block;width:12px;height:1em;background:var(--green);vertical-align:-2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.hero p{max-width:600px;margin:16px 0;color:#9fd6b0}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.sec{padding:52px 0;border-top:1px solid var(--dim)}
+.k{color:var(--green);font-size:13px;margin-bottom:14px}.k:before{content:"$ "}
+.h2{font-size:clamp(24px,4.5vw,40px);font-weight:800;color:var(--paper);margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+@media(max-width:760px){.g3{grid-template-columns:1fr}}
+.card{border:1px solid var(--dim);border-radius:8px;padding:22px;background:#050a05}
+.card .no{color:var(--green);font-weight:800}
+.card .no:before{content:"[";}.card .no:after{content:"]"}
+.card h3{font-size:17px;margin:8px 0 6px;color:var(--paper)}
+.card p{font-size:14px;color:#9fd6b0}
+.tier{border:1px solid var(--dim);border-radius:8px;padding:24px;background:#050a05}
+.tier.best{border-color:var(--green);box-shadow:0 0 24px #00ff6633}
+.tier .big{font-size:52px;font-weight:800;color:var(--green)}
+.tier .lab{font-size:12px;color:#5f9f76}
+.tier ul{list-style:none;margin-top:12px;font-size:13px}
+.tier li:before{content:"+ ";color:var(--green)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px;max-width:620px}
+input{background:#050a05;border:1px solid var(--dim);padding:13px;color:var(--paper);font-family:'JetBrains Mono';font-size:15px}
+input:focus{outline:0;border-color:var(--green);box-shadow:0 0 12px #00ff6633}
+input::placeholder{color:#4f7d61}
+.full{grid-column:1/-1}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+footer{padding:34px 22px;border-top:1px solid var(--dim);color:#5f9f76;font-size:13px}
+.disc{font-size:11px;color:#3f6f52;margin-top:10px;max-width:640px}
+.reveal{opacity:0;transform:translateY(16px);transition:.4s}.reveal.in{opacity:1;transform:none}
+</style></head><body>
+<nav><div class="logo">riskit</div><a href="#apply" class="btn">./take_challenge</a></nav>
+<header class="hero wrap">
+  <div class="term">
+    <div class="bar"><b>●</b> <i>●</i> <u>●</u> &nbsp; riskit — bash — 80×24</div>
+    <div class="body">
+      <div class="cmt"># mission: put your salary on the line</div>
+      <h1>lose_10kg()<br><span class="c">get_it_back();</span><span class="cursor"></span></h1>
+      <p>The accountability challenge that runs on the one input humans never ignore: their own money at risk. Follow the blueprint, hit the target, get your salary refunded.</p>
+      <div class="cta"><a href="#apply" class="btn">risk it now</a><a href="#how" class="btn ol">--how</a></div>
+    </div>
+  </div>
+</header>
+<section class="sec wrap" id="how"><div class="k">how_it_works</div><h2 class="h2">Dead simple. Brutally effective.</h2>
+  <div class="g3">
+    <div class="card reveal"><div class="no">01</div><h3>stake_salary</h3><p>Pay one month upfront. Commitment committed to main.</p></div>
+    <div class="card reveal"><div class="no">02</div><h3>run_blueprint</h3><p>Exact 3-month plan + daily WhatsApp drip.</p></div>
+    <div class="card reveal"><div class="no">03</div><h3>refund()</h3><p>Hit 10kg, verify, salary returns to you.</p></div>
+  </div>
+</section>
+<section class="sec wrap"><div class="k">the_stakes</div><h2 class="h2">Your money. Your call.</h2>
+  <div class="g3">
+    <div class="tier best reveal"><div class="lab">10kg / 3 months</div><div class="big">90%</div><div class="lab">salary_back</div><ul><li>we keep 10%</li><li>max payout</li></ul></div>
+    <div class="tier reveal"><div class="lab">10kg / 4 months</div><div class="big">80%</div><div class="lab">salary_back</div><ul><li>we keep 20%</li><li>grace month</li></ul></div>
+    <div class="tier reveal"><div class="lab">target missed</div><div class="big">50%</div><div class="lab">salary_back</div><ul><li>half returned</li><li>keep blueprint</li></ul></div>
+  </div>
+</section>
+<section class="sec wrap" id="apply"><div class="k">enrol --now</div><h2 class="h2">Bet on yourself.</h2>
+  <form onsubmit="this.style.display='none';document.getElementById('ok').style.display='block';return false">
+    <input required placeholder="full_name"><input required placeholder="phone_whatsapp">
+    <input required placeholder="email" class="full">
+    <input required placeholder="city"><input required placeholder="current_weight_kg" type="number">
+    <button class="btn full" style="border:0;cursor:pointer">$ claim_my_spot</button>
+  </form>
+  <div id="ok" style="display:none;color:var(--green);font-weight:700;margin-top:16px">✓ enrolled — we'll whatsapp you within 24h.</div>
+</section>
+<footer class="wrap"><div class="logo">riskit</div><p style="margin-top:6px">risk it. shred it. get it back.</p>
+<p class="disc"># self-directed fitness accountability program, not medical advice. consult a physician first. terms in participant agreement. Theme 09 · Terminal.</p></footer>
+<script>const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.15});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body></html>
