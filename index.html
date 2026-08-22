@@ -13,7 +13,7 @@
 :root{--yellow:#FFE500;--ink:#0A0A0A;--paper:#FFFFFF}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Space Grotesk',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+body{font-family:'Space Grotesk',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;overflow-x:hidden}
 h1,h2,h3,.d{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-.01em;line-height:.96}
 a{color:inherit}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
@@ -30,7 +30,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:14px 2
 .hero{padding:56px 0 50px}
 .herogrid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
 @media(max-width:860px){.herogrid{grid-template-columns:1fr;gap:44px}}
-.hero h1{font-size:clamp(42px,8.5vw,96px)}
+.hero h1{font-size:clamp(30px,8vw,96px)}
 .hero h1 .hl{background:var(--yellow);border:4px solid var(--ink);padding:0 10px;display:inline-block;transform:rotate(-1.5deg)}
 .hero p{font-size:19px;max-width:560px;margin:24px 0;font-weight:500}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
@@ -47,6 +47,13 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:14px 2
 .chartwrap .cl{font-family:'Archivo Black';font-size:11px;text-transform:uppercase;margin-bottom:4px}
 .stamp{position:absolute;top:-18px;right:2px;z-index:2;background:var(--yellow);border:3px solid var(--ink);font-family:'Archivo Black';font-size:15px;padding:9px 13px;transform:rotate(9deg);box-shadow:5px 5px 0 var(--ink);text-align:center;line-height:1}
 .stamp small{font-size:9px;display:block;margin-top:2px}
+.carousel{overflow:hidden}
+.track{display:flex;transition:transform .45s ease}
+.slide{min-width:100%}
+.dots{display:flex;gap:7px;justify-content:center;margin-top:12px}
+.dots i{width:12px;height:12px;border:2px solid var(--ink);background:#fff;cursor:pointer}
+.dots i.on{background:var(--ink)}
+@media(max-width:520px){nav{padding:12px 14px}.logo{font-size:20px}nav .btn{font-size:11px;padding:9px 12px;box-shadow:4px 4px 0 var(--ink)}.wrap{padding:0 16px}}
 .sec{padding:60px 0;border-top:4px solid var(--ink)}
 .sec.y{background:var(--yellow)}
 .k{font-family:'Archivo Black';font-size:14px;background:var(--ink);color:var(--yellow);display:inline-block;padding:6px 12px;margin-bottom:18px}
@@ -98,21 +105,57 @@ footer .logo{color:var(--paper)}
   <div class="heroR">
     <div class="stamp">100%<small>REFUND</small></div>
     <div class="phone">
-      <div class="top"><span>RISKIT</span><span>DAY 45 / 90</span></div>
+      <div class="top"><span>RISKIT</span><span id="pday">DAY 30 / 90</span></div>
       <div class="body">
-        <div class="bub y">Down 5.4kg 🔥 You're on pace for the full 90% refund. Keep going!</div>
-        <div class="chartwrap"><div class="cl">Your weight ↓</div>
-          <svg viewBox="0 0 210 96" width="100%" role="img" aria-label="Weight trending down over the program">
-            <line x1="6" y1="88" x2="204" y2="88" stroke="#0A0A0A" stroke-width="3"/>
-            <polyline points="12,20 60,34 108,50 156,66 196,82" fill="none" stroke="#0A0A0A" stroke-width="5"/>
-            <circle cx="12" cy="20" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
-            <circle cx="60" cy="34" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
-            <circle cx="108" cy="50" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
-            <circle cx="156" cy="66" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
-            <circle cx="196" cy="82" r="7" fill="#0A0A0A"/>
-          </svg>
-        </div>
-        <div class="bub" style="margin-top:10px">Today: 40-min walk + the lunch on your plan 💪</div>
+        <div class="carousel"><div class="track" id="track">
+
+          <div class="slide">
+            <div class="bub y">Month 1 done 🔥 Down 3.5kg — right on track.</div>
+            <div class="chartwrap"><div class="cl">Your weight ↓</div>
+              <svg viewBox="0 0 210 96" width="100%" role="img" aria-label="Month 1: down 3.5kg">
+                <line x1="6" y1="88" x2="204" y2="88" stroke="#0A0A0A" stroke-width="3"/>
+                <polyline points="12,20 72,32 132,42" fill="none" stroke="#0A0A0A" stroke-width="5"/>
+                <circle cx="12" cy="20" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+                <circle cx="72" cy="32" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+                <circle cx="132" cy="42" r="7" fill="#0A0A0A"/>
+              </svg>
+            </div>
+            <div class="bub" style="margin-top:10px">Today: 40-min walk + the lunch on your plan 💪</div>
+          </div>
+
+          <div class="slide">
+            <div class="bub y">Month 2 done 💪 Another 3.5kg — 7.0kg gone.</div>
+            <div class="chartwrap"><div class="cl">Your weight ↓</div>
+              <svg viewBox="0 0 210 96" width="100%" role="img" aria-label="Month 2: 7kg total">
+                <line x1="6" y1="88" x2="204" y2="88" stroke="#0A0A0A" stroke-width="3"/>
+                <polyline points="12,20 72,32 132,44 180,58" fill="none" stroke="#0A0A0A" stroke-width="5"/>
+                <circle cx="12" cy="20" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+                <circle cx="72" cy="32" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+                <circle cx="132" cy="44" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+                <circle cx="180" cy="58" r="7" fill="#0A0A0A"/>
+              </svg>
+            </div>
+            <div class="bub" style="margin-top:10px">Today: 8,000 steps + high-protein dinner 🍳</div>
+          </div>
+
+          <div class="slide">
+            <div class="bub y">🎉 Goal hit! 10kg gone &amp; verified.</div>
+            <div class="chartwrap"><div class="cl">Your weight ↓</div>
+              <svg viewBox="0 0 210 96" width="100%" role="img" aria-label="Month 3: 10kg lost">
+                <line x1="6" y1="88" x2="204" y2="88" stroke="#0A0A0A" stroke-width="3"/>
+                <polyline points="12,20 72,32 132,44 180,60 198,80" fill="none" stroke="#0A0A0A" stroke-width="5"/>
+                <circle cx="12" cy="20" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+                <circle cx="72" cy="32" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+                <circle cx="132" cy="44" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+                <circle cx="180" cy="60" r="5" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+                <circle cx="198" cy="80" r="7" fill="#0A0A0A"/>
+              </svg>
+            </div>
+            <div class="bub" style="margin-top:10px">Your 90% refund <b>(₹45,000*)</b> is on its way. Legend. <span style="font-weight:500;font-size:11px;display:block;margin-top:3px">*sample for a ₹50,000 salary</span></div>
+          </div>
+
+        </div></div>
+        <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
       </div>
     </div>
   </div>
@@ -225,5 +268,18 @@ document.querySelectorAll('.q button').forEach(b=>b.addEventListener('click',()=
 }));
 const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.14});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// hero phone carousel (Month 1 -> 2 -> 3)
+(function(){
+  const track=document.getElementById('track'); if(!track) return;
+  const dots=[].slice.call(document.querySelectorAll('#dots i'));
+  const pday=document.getElementById('pday');
+  const days=['DAY 30 / 90','DAY 60 / 90','DAY 90 / 90'];
+  let i=0, n=dots.length, t;
+  function go(k){i=(k+n)%n; track.style.transform='translateX('+(-i*100)+'%)';
+    dots.forEach((d,j)=>d.classList.toggle('on',j===i)); if(pday)pday.textContent=days[i];}
+  function reset(){clearInterval(t); t=setInterval(()=>go(i+1),3500);}
+  dots.forEach((d,j)=>d.addEventListener('click',()=>{go(j);reset();}));
+  reset();
+})();
 </script>
 </body></html>
