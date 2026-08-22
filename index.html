@@ -50,9 +50,12 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:14px 2
 .carousel{overflow:hidden}
 .track{display:flex;transition:transform .45s ease}
 .slide{min-width:100%}
-.dots{display:flex;gap:7px;justify-content:center;margin-top:12px}
+.carnav{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:12px}
+.dots{display:flex;gap:7px;justify-content:center}
 .dots i{width:12px;height:12px;border:2px solid var(--ink);background:#fff;cursor:pointer}
 .dots i.on{background:var(--ink)}
+.arw{font-family:'Archivo Black';font-size:15px;line-height:1;background:var(--yellow);color:var(--ink);border:2px solid var(--ink);width:30px;height:30px;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.arw:active{transform:translate(3px,3px);box-shadow:none}
 @media(max-width:520px){nav{padding:12px 14px}.logo{font-size:20px}nav .btn{font-size:11px;padding:9px 12px;box-shadow:4px 4px 0 var(--ink)}.wrap{padding:0 16px}}
 .sec{padding:60px 0;border-top:4px solid var(--ink)}
 .sec.y{background:var(--yellow)}
@@ -155,7 +158,11 @@ footer .logo{color:var(--paper)}
           </div>
 
         </div></div>
-        <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
+        <div class="carnav">
+          <button class="arw" id="prev" aria-label="Previous">‹</button>
+          <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
+          <button class="arw" id="next" aria-label="Next">›</button>
+        </div>
       </div>
     </div>
   </div>
@@ -268,18 +275,23 @@ document.querySelectorAll('.q button').forEach(b=>b.addEventListener('click',()=
 }));
 const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.14});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-// hero phone carousel (Month 1 -> 2 -> 3)
+// hero phone carousel — manual only (swipe / arrows / dots)
 (function(){
   const track=document.getElementById('track'); if(!track) return;
   const dots=[].slice.call(document.querySelectorAll('#dots i'));
   const pday=document.getElementById('pday');
   const days=['DAY 30 / 90','DAY 60 / 90','DAY 90 / 90'];
-  let i=0, n=dots.length, t;
+  let i=0, n=dots.length;
   function go(k){i=(k+n)%n; track.style.transform='translateX('+(-i*100)+'%)';
     dots.forEach((d,j)=>d.classList.toggle('on',j===i)); if(pday)pday.textContent=days[i];}
-  function reset(){clearInterval(t); t=setInterval(()=>go(i+1),3500);}
-  dots.forEach((d,j)=>d.addEventListener('click',()=>{go(j);reset();}));
-  reset();
+  dots.forEach((d,j)=>d.addEventListener('click',()=>go(j)));
+  var p=document.getElementById('prev'), nx=document.getElementById('next');
+  if(p) p.addEventListener('click',()=>go(i-1));
+  if(nx) nx.addEventListener('click',()=>go(i+1));
+  var x0=null, c=track.parentElement;
+  c.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+  c.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(dx<0?i+1:i-1);x0=null;});
+  go(0);
 })();
 </script>
 </body></html>
