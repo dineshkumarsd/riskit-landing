@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RISKIT — All Landing Page Previews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800;900&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Space Grotesk',sans-serif;background:#08080d;color:#f4f4fb;padding:48px 22px 90px}
+.wrap{max-width:1160px;margin:0 auto}
+h1{font-family:'Unbounded';font-weight:900;font-size:clamp(30px,6vw,58px);letter-spacing:-.02em}
+h1 b{color:#c6ff3d}
+.sub{color:#a2a2b8;margin:12px 0 8px;font-size:18px;max-width:700px}
+.edhead{display:flex;align-items:baseline;gap:12px;margin:48px 0 6px;flex-wrap:wrap}
+.edhead h2{font-family:'Unbounded';font-weight:800;font-size:clamp(22px,3.5vw,34px)}
+.edhead .tagpill{font-family:'Unbounded';font-weight:700;font-size:11px;letter-spacing:.06em;padding:5px 11px;border-radius:100px}
+.rec{background:#c6ff3d;color:#08110a}
+.old{background:transparent;color:#8a8a9c;border:1px solid rgba(255,255,255,.18)}
+.eddesc{color:#8a8a9c;font-size:14.5px;margin-bottom:22px;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:20px}
+.card{border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;background:#0e0e18;transition:transform .18s,border-color .18s;display:block;text-decoration:none;color:inherit}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.4)}
+.prev{height:210px;padding:22px;display:flex;flex-direction:column;justify-content:space-between}
+.prev .logo{font-family:'Unbounded';font-weight:900;font-size:19px;color:#fff}
+.prev .hl{font-family:'Unbounded';font-weight:900;font-size:27px;line-height:1.05}
+.prev .chip{font-family:'Unbounded';font-weight:700;font-size:11px;padding:8px 13px;border-radius:100px;align-self:flex-start}
+.meta{padding:16px 18px}.meta .nm{font-family:'Unbounded';font-weight:700;font-size:14px}
+.sw{display:flex;gap:6px;margin:11px 0 7px}.sw i{width:24px;height:24px;border-radius:6px;display:block;border:1px solid rgba(255,255,255,.12)}
+.hex{font-size:11px;color:#8a8a9c}
+.psy{font-size:12.5px;color:#b7b7c8;margin-top:10px;line-height:1.45;border-top:1px solid rgba(255,255,255,.08);padding-top:10px}
+.note{margin-top:40px;padding:18px 20px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#0e0e18;color:#a2a2b8;font-size:13.5px}
+.note b{color:#f4f4fb}
+</style></head><body><div class="wrap">
+
+<h1>RISK<b>IT</b>. &mdash; Landing Page Previews</h1>
+<p class="sub">Tap any card to open the full landing page &mdash; works on phone and laptop.</p>
+
+<div class="edhead"><h2>10 Design Themes</h2><span class="tagpill rec">NEW</span><span style="color:#8a8a9c;font-size:13px">all-new fonts &amp; layouts</span></div>
+<p class="eddesc">Ten completely different design directions for the classic offer &mdash; each with its own fonts, layout and design language (Brutalist, Editorial, Synthwave, Luxury, Swiss, Y2K, Athletic, Wellness, Terminal, Riso Poster).</p>
+<div class="grid" id="themes"></div>
+<p style="margin-top:22px"><a href="themes2/" style="color:#c6ff3d;font-family:'Unbounded',sans-serif;font-weight:700;text-decoration:none;font-size:15px">＋ See 35 more themes (11–45) with live previews →</a></p>
+
+<div class="edhead"><h2>35 More Themes</h2><span class="tagpill rec">NEW</span><span style="color:#8a8a9c;font-size:13px">themes 11–45</span></div>
+<p class="eddesc">Thirty-five more directions — each a unique font pairing, palette, corner style, border, shadow and background motif. Click to open; the <a href="themes2/" style="color:#c6ff3d">gallery</a> has full visual previews.</p>
+<div class="grid" id="more"></div>
+
+<div class="edhead"><h2>Extreme edition</h2><span class="tagpill rec">RECOMMENDED</span><span style="color:#8a8a9c;font-size:13px">5 palettes</span></div>
+<p class="eddesc">Free-transformation messaging, Tamil-Nadu-safe wording, and animations that run on mobile too. Use this set for anything public-facing.</p>
+<div class="grid" id="extreme"></div>
+
+<div class="edhead"><h2>Classic edition</h2><span class="tagpill old">20 COLOUR PALETTES</span></div>
+<p class="eddesc">20 palettes chosen for high-converting colour psychology &mdash; each uses exactly 3 colours, with the reasoning noted on every card. Original "salary on the line" wording (reference only &mdash; use Extreme copy for public ads in Tamil Nadu).</p>
+<div class="grid" id="classic"></div>
+
+<div class="note">&#9888;&#65039; <b>Lead forms are demo-only</b> right now &mdash; they show a success message but don't send anywhere yet. Wire them to a Google Sheet / WhatsApp CRM before running ads.</div>
+</div>
+
+<script>
+// Extreme edition — 5 palettes
+const EX=[
+ ["01","ACID VAULT","#0B0F0A","#C6FF3D","#EDEFE6"],
+ ["02","INFERNO","#12060A","#FF2D55","#FFE3D0"],
+ ["03","VOLTAGE","#0A0A18","#7C5CFF","#5FF3E6"],
+ ["04","SUNSET RIOT","#160A12","#FF3EA5","#FFC24B"],
+ ["05","MINT CONDITION","#06110E","#2EE6A6","#F3FFE9"]
+];
+// Classic edition — 20 palettes with colour psychology
+const CL=[
+ ["01","ACID VAULT","#0B0F0A","#C6FF3D","#EDEFE6","Lime = go / energy / health. Reads as action and vitality."],
+ ["02","CONVERSION RED","#12060A","#FF3B3B","#FFE3D0","Red = urgency + appetite + action. The classic 'buy now' colour."],
+ ["03","TRUST BLUE","#060B18","#3B82F6","#E6EEFF","Blue = trust, safety, reliability. Eases paying upfront."],
+ ["04","ENERGY ORANGE","#14090A","#FF7A18","#FFEBD6","Orange = enthusiasm + affordable action. A proven CTA colour."],
+ ["05","GROWTH GREEN","#06110E","#2EE6A6","#F3FFE9","Emerald = growth, money, wellness. 'Go' + financial gain."],
+ ["06","ROYAL VIOLET","#0A0A18","#8B5CF6","#ECE8FF","Purple = premium + transformation. Aspirational upgrade."],
+ ["07","GOLD LUXE","#0E0B06","#FFC300","#FFF6E0","Gold = reward, value, winning. Refund framed as a prize."],
+ ["08","HOT MAGENTA","#160A12","#FF3EA5","#FFE1F0","Magenta = bold + impulsive. Grabs attention on feeds."],
+ ["09","CYAN SHOCK","#04121A","#22D3EE","#E0FBFF","Cyan = fresh, modern, clear. Clean and trustworthy."],
+ ["10","SUNSET CORAL","#17090B","#FF6B5E","#FFE7E1","Coral = friendly urgency. Action without aggression."],
+ ["11","TEAL TRUST","#041413","#14B8A6","#E3FFFB","Teal = trust + freshness. Calm confidence for commitment."],
+ ["12","AMBER ALERT","#130D04","#FFB020","#FFF2D6","Amber = warmth + attention. Draws the eye to the CTA."],
+ ["13","ELECTRIC INDIGO","#08091A","#6366F1","#E7E9FF","Indigo = focus + premium. Credible; reduces perceived risk."],
+ ["14","RUBY DRIVE","#14060A","#E11D48","#FFE0E7","Crimson = passion + power. High-drama urgency."],
+ ["15","NEON MINT","#08120E","#4ADE80","#EAFFF0","Mint = calm health + 'go'. Feels healthy and safe."],
+ ["16","TANGERINE POP","#150A05","#FF8A00","#FFEAD5","Bright orange = impulse. The strongest 'act now' tone."],
+ ["17","SKY OPTIMISM","#061019","#38BDF8","#E4F6FF","Light blue = optimism + openness. Lowers resistance."],
+ ["18","PLUM PREMIUM","#140813","#F4C430","#F7E9FF","Plum + gold = luxury + reward. Premium 'win it back'."],
+ ["19","FOREST MONEY","#08130B","#A3E635","#EFFFDD","Green + lime = wealth + nature + go. Money and health."],
+ ["20","PINK ENERGY","#150910","#FF4D8D","#FFE3EE","Vivid pink = youthful energy. Stops the scroll."]
+];
+function card(vn,name,bg,ac,li,href,headline,cta,psy){
+ return `<a class="card" href="${href}"><div class="prev" style="background:${bg}">
+  <div class="logo">RISK<b style="color:${ac}">IT</b>.</div>
+  <div class="hl" style="background:linear-gradient(100deg,${ac},${li});-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">${headline}</div>
+  <div class="chip" style="background:${ac};color:${bg}">${cta} &rarr;</div></div>
+  <div class="meta"><div class="nm">V${vn} &middot; ${name}</div>
+  <div class="sw"><i style="background:${bg}"></i><i style="background:${ac}"></i><i style="background:${li}"></i></div>
+  <div class="hex">${bg} &nbsp; ${ac} &nbsp; ${li}</div>
+  ${psy?`<div class="psy">${psy}</div>`:''}</div></a>`;
+}
+// 10 design themes
+const TH=[
+ ["01","Brutalist","01-brutalist.html","Archivo Black · thick borders, acid yellow"],
+ ["02","Editorial","02-editorial.html","Fraunces serif · magazine, cream & rust"],
+ ["03","Synthwave","03-synthwave.html","Orbitron · neon grid, retro-80s"],
+ ["04","Luxury","04-luxury.html","Cormorant · black & gold, refined"],
+ ["05","Swiss","05-swiss.html","Archivo · grid, red accent, precise"],
+ ["06","Y2K Bubble","06-y2k.html","Baloo 2 · glossy, playful pastels"],
+ ["07","Athletic","07-athletic.html","Anton · italic, diagonal, red/black"],
+ ["08","Wellness","08-wellness.html","Fraunces · calm sage, organic"],
+ ["09","Terminal","09-terminal.html","JetBrains Mono · green-on-black code"],
+ ["10","Riso Poster","10-riso.html","Bebas Neue · halftone, blue & red"]
+];
+document.getElementById('themes').innerHTML=TH.map(t=>`
+ <a class="card" href="themes/${t[2]}"><div class="prev" style="background:#0e0e18;justify-content:flex-end">
+  <div style="font-family:'Unbounded';font-weight:900;font-size:12px;color:#c6ff3d">THEME ${t[0]}</div>
+  <div style="font-family:'Unbounded';font-weight:900;font-size:26px;line-height:1.05">${t[1]}</div>
+  <div class="chip" style="background:#c6ff3d;color:#08110a">Open theme &rarr;</div></div>
+  <div class="meta"><div class="nm">${t[1]}</div><div class="psy">${t[3]}</div></div></a>`).join('');
+// 35 more themes (11-45)
+const MORE=[
+ ["11","Neo Mint","Sora"],["12","Midnight Pro","Manrope"],["13","Coral Soft","Poppins"],["14","Mono Grid","Space Mono"],
+ ["15","Vapor Lilac","Chakra Petch"],["16","Newsprint","Playfair Display"],["17","Cyber Lime","Rajdhani"],["18","Warm Sand","Fraunces"],
+ ["19","Ink Noir","Oswald"],["20","Bubblegum","Fredoka"],["21","Deep Ocean","Sora"],["22","Retro Orange","Righteous"],
+ ["23","Pure B/W","Archivo"],["24","Electric Blue","Space Grotesk"],["25","Forest Lux","Cormorant"],["26","Grape Soda","Poppins"],
+ ["27","Sunrise Block","Baloo 2"],["28","Steel Yard","Oswald"],["29","Candy Brutal","Archivo Black"],["30","Noir Gold","Fraunces"],
+ ["31","Aqua Fresh","Quicksand"],["32","Neon Pink","Syne"],["33","Kraft","Bitter"],["34","Blueprint","Space Mono"],
+ ["35","Sunset Poster","Anton"],["36","Lavender Calm","Jost"],["37","Matcha","Fraunces"],["38","Crimson Bold","Archivo"],
+ ["39","Slate Pro","Manrope"],["40","Tangerine Brutal","Space Grotesk"],["41","Royal Navy","Cormorant"],["42","Mint Terminal","JetBrains Mono"],
+ ["43","Peach Editorial","Fraunces"],["44","Volt Poster","Bebas Neue"],["45","Ice Minimal","Inter"]
+];
+document.getElementById('more').innerHTML=MORE.map(t=>`
+ <a class="card" href="themes2/t${t[0]}.html"><div class="prev" style="background:#0e0e18;justify-content:flex-end">
+  <div style="font-family:'Unbounded';font-weight:900;font-size:12px;color:#c6ff3d">THEME ${t[0]}</div>
+  <div style="font-family:'Unbounded';font-weight:900;font-size:24px;line-height:1.05">${t[1]}</div>
+  <div class="chip" style="background:#c6ff3d;color:#08110a">Open →</div></div>
+  <div class="meta"><div class="nm">${t[1]}</div><div class="psy">${t[2]}</div></div></a>`).join('');
+document.getElementById('extreme').innerHTML=EX.map(p=>card(p[0],p[1],p[2],p[3],p[4],`riskit_v${p[0]}.html`,"FREE<br>transformation.","Start free","")).join('');
+document.getElementById('classic').innerHTML=CL.map(p=>card(p[0],p[1],p[2],p[3],p[4],`classic/riskit_v${p[0]}.html`,"Lose 10kg.<br>Get it back.","Risk it now",p[5])).join('');
+</script>
+</body></html>
