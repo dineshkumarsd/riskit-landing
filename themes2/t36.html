@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RISKIT — Lavender Calm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F0FB;--ink:#1E1636;--accent:#7C5CFF;--onacc:#ffffff;--muted:rgba(0,0,0,.6);--card:rgba(0,0,0,.035);--line:rgba(0,0,0,.14);--r:20px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.d{font-family:'Jost',sans-serif;text-transform:none;line-height:1.05}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.bgfx{position:fixed;inset:0;z-index:0;pointer-events:none;display:none}
+.mq{background:var(--accent);color:var(--onacc);overflow:hidden;white-space:nowrap;font-family:'Jost';font-weight:700;position:relative;z-index:5}
+.mq div{display:inline-block;animation:mv 18s linear infinite;padding:9px 0;font-size:13px;letter-spacing:.05em}
+.mq span{margin:0 20px}@keyframes mv{to{transform:translateX(-50%)}}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:20}
+.logo{font-family:'Jost';font-weight:800;font-size:24px}.logo b{color:var(--accent)}
+.btn{font-family:'Jost';font-weight:700;font-size:14px;background:var(--accent);color:var(--onacc);padding:13px 24px;border-radius:100px;border:0;cursor:pointer;display:inline-block;box-shadow:none;transition:.15s;text-transform:none}
+.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn.ol{background:transparent;color:var(--ink);box-shadow:none;border:1px solid var(--ink)}
+.hero{padding:66px 0 46px;text-align:center}
+.hero h1{font-size:clamp(40px,8vw,90px);font-weight:800}
+.hero h1 .a{color:var(--accent)}
+.hero p{max-width:600px;margin:22px auto 0;font-size:19px;color:var(--muted)}
+.hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:100px;padding:7px 16px;font-size:13px;color:var(--muted);margin-bottom:20px;font-family:'Inter'}
+.sec{padding:60px 0;border-top:1px solid var(--line)}
+.sechead{text-align:center;margin-bottom:8px}
+.k{font-family:'Jost';font-weight:700;color:var(--accent);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.h2{font-size:clamp(28px,5vw,50px);font-weight:800}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+@media(max-width:760px){.g3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 18px 45px rgba(0,0,0,.12)}
+.card .no{font-family:'Jost';font-weight:800;font-size:38px;color:var(--accent)}
+.card h3{font-family:'Jost';font-size:21px;margin:8px 0 8px}
+.card p{color:var(--muted);font-size:15px}
+.tier{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:0 18px 45px rgba(0,0,0,.12)}
+.tier.best{border-color:var(--accent)}
+.tier .big{font-family:'Jost';font-weight:800;font-size:60px;color:var(--accent);line-height:1}
+.tier .lab{font-family:'Jost';font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.tier ul{margin:14px 0 0 18px;font-size:14px;color:var(--muted)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;max-width:640px;margin-inline:auto}
+input{background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r)/1.6);padding:14px;color:var(--ink);font-family:'Inter';font-size:16px}
+input:focus{outline:0;border-color:var(--accent)}input::placeholder{color:var(--muted)}
+.full{grid-column:1/-1}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+footer{padding:40px 24px;border-top:1px solid var(--line);color:var(--muted)}
+.logo2{font-family:'Jost';font-weight:800;font-size:22px;color:var(--ink)}.logo2 b{color:var(--accent)}
+.disc{font-size:12px;margin-top:10px;max-width:640px;opacity:.8}
+.pal{position:fixed;left:14px;bottom:14px;z-index:30;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:11px;font-family:'Jost';display:flex;gap:8px;align-items:center;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pal i{width:14px;height:14px;border-radius:4px;display:block}
+.reveal{opacity:0;transform:translateY(20px);transition:.5s}.reveal.in{opacity:1;transform:none}
+</style></head><body>
+<div class="bgfx"></div>
+
+<nav><div class="logo">RISK<b>IT</b>.</div><a href="#apply" class="btn">Take the challenge</a></nav>
+<header class="hero wrap">
+  <span class="pill">Now enrolling · Tamil Nadu</span>
+  <h1>Salary on the line.<br><span class="a">Lose 10kg.</span> Get it back.</h1>
+  <p>The accountability challenge that works because your own money is at stake. Follow the blueprint, hit the target, walk away with your cash and your new body.</p>
+  <div class="cta"><a href="#apply" class="btn">Risk it now &rarr;</a><a href="#how" class="btn ol">How it works</a></div>
+</header>
+<section class="sec" id="how"><div class="wrap">
+  <div class="sechead"><div class="k">How it works</div><h2 class="h2">Dead simple. Brutally effective.</h2></div>
+  <div class="g3">
+    <div class="card reveal"><div class="no">01</div><h3>Stake your salary</h3><p>Pay one month upfront. Commitment locked, excuses gone.</p></div>
+    <div class="card reveal"><div class="no">02</div><h3>Follow the blueprint</h3><p>Exact 3-month plan plus a daily WhatsApp drip.</p></div>
+    <div class="card reveal"><div class="no">03</div><h3>Get paid back</h3><p>Hit 10kg, verify with photos + weigh-in, salary returns.</p></div>
+  </div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="sechead"><div class="k">The stakes</div><h2 class="h2">Your money. Your call.</h2></div>
+  <div class="g3">
+    <div class="tier best reveal"><div class="lab">10kg / 3 months</div><div class="big">90%</div><div class="lab">salary back</div><ul><li>We keep just 10%</li><li>Biggest payout</li></ul></div>
+    <div class="tier reveal"><div class="lab">10kg / 4 months</div><div class="big">80%</div><div class="lab">salary back</div><ul><li>We keep 20%</li><li>Grace month</li></ul></div>
+    <div class="tier reveal"><div class="lab">Missed target</div><div class="big">50%</div><div class="lab">salary back</div><ul><li>Half refunded</li><li>Keep the blueprint</li></ul></div>
+  </div>
+</div></section>
+<section class="sec" id="apply"><div class="wrap">
+  <div class="sechead"><div class="k">Enrol</div><h2 class="h2">Bet on yourself.</h2></div>
+  <form onsubmit="this.style.display='none';document.getElementById('ok').style.display='block';return false">
+    <input required placeholder="Full name"><input required placeholder="Phone (WhatsApp)">
+    <input required placeholder="Email" class="full">
+    <input required placeholder="City"><input required placeholder="Current weight (kg)" type="number">
+    <button class="btn full">Claim my spot &rarr;</button>
+  </form>
+  <div id="ok" style="display:none;font-family:'Jost';font-weight:800;font-size:22px;color:var(--accent);margin-top:16px">You're in — we'll WhatsApp you within 24h.</div>
+</div></section>
+<footer class="wrap"><div class="logo2">RISK<b>IT</b>.</div><p style="margin-top:6px">Risk it. Shred it. Get it back.</p>
+<p class="disc">Self-directed fitness accountability program, not medical advice. Consult a physician first. Terms in the participant agreement. Theme 36 · Lavender Calm.</p></footer>
+<div class="pal">Lavender Calm <i style="background:var(--bg);border:1px solid var(--line)"></i><i style="background:var(--accent)"></i><i style="background:var(--ink)"></i></div>
+<script>const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.14});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body></html>
