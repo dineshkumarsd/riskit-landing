@@ -40,6 +40,17 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:14px 2
 .trust span{border:3px solid var(--ink);padding:8px 14px;font-weight:700;font-size:14px}
 .sec{padding:60px 0;border-top:4px solid var(--ink)}
 .sec.y{background:var(--yellow)}
+.sec.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.sec.dark .k{background:var(--yellow);color:var(--ink)}
+.sec.dark .box{background:#141414;border-color:var(--yellow);color:var(--paper);box-shadow:8px 8px 0 var(--yellow)}
+.sec.dark .box h3{color:var(--yellow)}
+.sec.dark .box .no{color:var(--yellow)}
+.statline{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.statline div{border:3px solid var(--yellow);padding:14px 18px}
+.statline b{font-family:'Archivo Black';font-size:26px;color:var(--yellow);display:block;line-height:1}
+.statline span{font-size:13px;font-weight:600}
+.punch{font-family:'Archivo Black';text-transform:uppercase;font-size:clamp(20px,3.5vw,30px);margin-top:34px;line-height:1.1}
+.punch .hl{background:var(--yellow);color:var(--ink);padding:0 8px}
 .k{font-family:'Archivo Black';font-size:14px;background:var(--ink);color:var(--yellow);display:inline-block;padding:6px 12px;margin-bottom:18px}
 .sec.y .k{background:var(--paper);color:var(--ink);border:3px solid var(--ink)}
 .h2{font-size:clamp(30px,6vw,58px);margin-bottom:14px}
@@ -113,6 +124,24 @@ footer{border-top:4px solid var(--ink);padding:40px 20px 120px;font-weight:500}
     <div class="box reveal"><h3>Built for professionals</h3><p>Designed around busy work schedules. No 2-hour gym sessions. It fits your real life.</p></div>
     <div class="box reveal"><h3>Zero risk to start</h3><p>Held securely and refunded per your result, plus a 10-day money-back guarantee. Try it with nothing to lose.</p></div>
   </div></div>
+</section>
+
+<section class="sec dark" id="science">
+  <div class="wrap"><div class="k">The raw truth</div><h2 class="h2">Fat loss isn't complicated.<br>It's just hard.</h2>
+  <p style="font-weight:500;max-width:640px;margin-top:14px">The stuff your gym won't say out loud — because complexity keeps you paying, and simplicity gets you results.</p>
+  <div class="statline reveal">
+    <div><b>≈850</b><span>kcal/day deficit =<br>10kg in 90 days</span></div>
+    <div><b>300–500</b><span>kcal burned in a<br>1-hour workout</span></div>
+    <div><b>1</b><span>equation that actually<br>burns fat: the deficit</span></div>
+  </div>
+  <div class="why" style="margin-top:34px">
+    <div class="box reveal"><div class="no">01</div><h3>It's one equation</h3><p>Eat fewer calories than you burn and your body eats your fat to cover the gap. That deficit is the <em>only</em> thing that removes fat — no supplement or "fat-burning" workout beats it.</p></div>
+    <div class="box reveal"><div class="no">02</div><h3>You lose fat in the kitchen</h3><p>It's far easier to not eat 500 calories than to burn them. One biryani ≈ 90 minutes of running. You cannot out-train your plate — diet does the heavy lifting.</p></div>
+    <div class="box reveal"><div class="no">03</div><h3>Forget the 3×12</h3><p>You don't need push-pull splits, supersets or memorised reps. Move ~1 hour, get sweaty, walk more, and lift something heavy 2–3× a week so the weight you lose is fat, not muscle. That's it.</p></div>
+    <div class="box reveal"><div class="no">04</div><h3>Two real cheat codes</h3><p>Protein in every meal (keeps you full, protects muscle) and proper sleep (bad sleep makes you eat more without noticing). No pills — just habits.</p></div>
+  </div>
+  <p class="punch reveal">You already know what to do.<br><span class="hl">RISKIT makes sure you do it.</span></p>
+  </div>
 </section>
 
 <section class="sec" id="faq">
