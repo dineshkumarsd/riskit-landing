@@ -13,7 +13,7 @@
 :root{--yellow:#FFE500;--ink:#0A0A0A;--paper:#FFFFFF}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Space Grotesk',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;overflow-x:hidden}
+body{font-family:'Space Grotesk',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 h1,h2,h3,.d{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-.01em;line-height:.96}
 a{color:inherit}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
@@ -244,9 +244,9 @@ footer :focus-visible,.mq :focus-visible,.btn.dark:focus-visible,.phone .top :fo
   <p style="font-weight:600;max-width:580px;margin-top:6px">Believe in yourself enough to start. If you bet on yourself — then RISK IT. Apply now and our team will reach out to lock in your challenge. Limited spots per cohort.</p>
   <div class="box" style="margin-top:26px;background:var(--paper)">
   <form id="lead">
-    <input required name="name" autocomplete="name" aria-label="Full name" placeholder="Full name (e.g. Karthik Raja)…"><input required name="phone" type="tel" inputmode="tel" autocomplete="tel" aria-label="Phone number" placeholder="Phone (e.g. 98765 43210)…">
-    <input required name="email" type="email" inputmode="email" autocomplete="email" spellcheck="false" aria-label="Email address" placeholder="Email (e.g. karthik@email.com)…" class="full">
-    <input required name="age" type="number" inputmode="numeric" min="18" max="75" autocomplete="off" aria-label="Age" placeholder="Age (e.g. 32)…"><select required name="gender" aria-label="Gender"><option value="" disabled selected>Gender…</option><option>Male</option><option>Female</option><option>Other</option></select>
+    <input required name="name" autocomplete="name" aria-label="Full name" placeholder="Full name"><input required name="phone" type="tel" inputmode="tel" autocomplete="tel" aria-label="Phone number" placeholder="Phone number">
+    <input required name="email" type="email" inputmode="email" autocomplete="email" spellcheck="false" aria-label="Email address" placeholder="Email" class="full">
+    <input required name="age" type="number" inputmode="numeric" min="18" max="75" autocomplete="off" aria-label="Age" placeholder="Age"><select required name="gender" aria-label="Gender"><option value="" disabled selected>Gender…</option><option>Male</option><option>Female</option><option>Other</option></select>
     <select required name="working_professional" class="full" aria-label="Are you a working professional?"><option value="" disabled selected>Are you a working professional?…</option><option>Yes</option><option>No</option></select>
     <button class="btn dark full" type="submit">Claim my spot →</button>
   </form>
@@ -296,6 +296,14 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   c.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
   c.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(dx<0?i+1:i-1);x0=null;});
   go(0);
+})();
+// hide the sticky mobile bar while filling the form so it can't overlap fields/keyboard
+(function(){
+  var lead=document.getElementById('lead'), sticky=document.querySelector('.sticky'); if(!lead||!sticky) return;
+  lead.addEventListener('focusin',function(){sticky.style.display='none';});
+  lead.addEventListener('focusout',function(){setTimeout(function(){
+    if(!lead.contains(document.activeElement) && window.matchMedia('(max-width:820px)').matches) sticky.style.display='';
+  },100);});
 })();
 </script>
 </body></html>
