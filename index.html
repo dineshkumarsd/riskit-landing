@@ -260,15 +260,12 @@ footer :focus-visible,.mq :focus-visible,.btn.dark:focus-visible,.phone .top :fo
 <div class="sticky"><div><div class="logo" style="font-size:16px">RISK<b>IT</b></div><small>Get your salary back</small></div><a href="#apply" class="btn">Take the challenge</a></div>
 
 <script>
-/* CONFIG — set your Web3Forms key (free at https://web3forms.com) so leads land in your inbox */
-const CONFIG = { web3formsKey: "d464a302-61a2-446e-8090-e3d14ee63beb" };
+/* CONFIG — leads post directly into your Google Sheet via an Apps Script Web App */
+const CONFIG = { sheetUrl: "https://script.google.com/macros/s/AKfycbxfC8E46AObI9eluq9Hr9KC8T3ambmY53El5k0rxM6ECLn7MeUH_H6De9M3m1rfMhOI/exec" };
 document.getElementById('lead').addEventListener('submit', async (e)=>{
-  e.preventDefault(); const f=e.target, data=new FormData(f); data.append('subject','New RISKIT lead');
+  e.preventDefault(); const f=e.target, data=new URLSearchParams(new FormData(f));
   const sb=f.querySelector('button[type=submit]'); sb.disabled=true; sb.textContent='Sending…';
-  if(CONFIG.web3formsKey && !CONFIG.web3formsKey.startsWith('REPLACE')){
-    data.append('access_key', CONFIG.web3formsKey);
-    try{ const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:data}); if(!r.ok) throw 0; }catch(_){}
-  }
+  try{ await fetch(CONFIG.sheetUrl,{method:'POST',mode:'no-cors',body:data}); }catch(_){}
   f.style.display='none'; document.getElementById('ok').style.display='block';
   document.getElementById('ok').scrollIntoView({behavior:'smooth',block:'center'});
 });
